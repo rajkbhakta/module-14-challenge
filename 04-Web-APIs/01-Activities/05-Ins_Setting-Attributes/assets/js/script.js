@@ -2,6 +2,7 @@
  var divTags = document.querySelectorAll("div");
  var pTags = document.querySelectorAll("p");
  var imgEl = document.querySelectorAll("img");
+ var classEl = document.getElementsByClassName('change1');
 
 // Access element by ID using .querySelector()
  var changeP = document.querySelector("#change2");
@@ -17,6 +18,8 @@
 
 // Adds size and width styling to image
  imgEl[0].setAttribute("style", "width:50%");
+
+ classEl[0].setAttribute("style", "font-size: 30px");
 
 // Loops through divTags to set each one to have the color blue and the font size of 30px
 for (var i = 0; i < divTags.length; i++) {
