@@ -18,8 +18,17 @@ function handleFormSubmit(event) {
   var selected = [];
 
   // Loop through checked options to store in array
+  /* for(var i = 0; i < checkedEl; i++) {
+      var theCurrentElement = $(checkedEl[i]);
+      var theCurrentElementValue = theCurrentElement.val();
+      selected.push(theCurrentElementValue);
+  }*/
+  console.log(checkedEl);
   $.each(checkedEl, function () {
-    selected.push($(this).val());
+    //console.log(this);
+    var theCurrentElement = $(this);
+    var theCurrentElementValue = theCurrentElement.val();
+    selected.push(theCurrentElementValue);
   });
   console.log('Toppings: ', selected.join(', '));
 
