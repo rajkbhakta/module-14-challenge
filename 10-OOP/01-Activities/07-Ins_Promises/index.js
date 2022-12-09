@@ -26,6 +26,7 @@ const playGames = (reward) => {
   return Promise.resolve(message);
 };
 
+//PSA: catch() is short for then(null, failureCallback)
 willGetSwitch
   .then(playGames)
   .then((resolved) => console.log(resolved))

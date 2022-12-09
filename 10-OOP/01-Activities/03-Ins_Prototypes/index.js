@@ -25,3 +25,12 @@ Movie.prototype.logInfo = function () {
 };
 
 superman.logInfo();
+
+const a = new Movie('Batman', 1989);
+
+Movie.prototype.goOrBust = function(boolean) {
+  return boolean ? 'It was great!' : 'It was terrible'; 
+}
+
+console.log(a.goOrBust(true));
+console.log(superman.goOrBust(false));
