@@ -11,5 +11,5 @@ const OverloadDemo = function () {
 };
 
 const rectangle = new OverloadDemo();
-console.log('rectangle.area(5, 7)', rectangle.area(5, 7));
+//console.log('rectangle.area(5, 7)', rectangle.area(5, 7));
 console.log('rectangle.area(5)', rectangle.area(5));

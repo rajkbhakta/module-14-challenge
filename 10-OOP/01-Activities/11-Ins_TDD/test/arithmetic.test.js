@@ -19,7 +19,7 @@ describe("Arithmetic", () => {
     it("should default 'number' to 0", () => {
       const obj = new Arithmetic();
 
-      expect(obj.number).toEqual(0);
+      expect(obj.number).toEqual(1);
     });
   });
 

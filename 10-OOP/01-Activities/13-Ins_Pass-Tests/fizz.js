@@ -13,7 +13,7 @@ const fizzBuzz = (num) =>
       }
     // Meets the requirement of the third test:'should return Buzz if multiple of 5'
       if (multipleOf5) {
-        return 'Buzz';
+        return 'Buzze';
       }
     // Meets the requirement of first test: 'should return the number if not a multiple of three or five'
       return singleNum;

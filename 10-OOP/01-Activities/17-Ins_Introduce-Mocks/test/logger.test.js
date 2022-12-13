@@ -16,7 +16,7 @@ describe("Logger", () => {
     it("should print in black", () => {
       const log = new Logger();
       const message = "Hello world!";
-      const mock = jest.spyOn(console, "log");
+      const mock = jest.spyOn(console, "log"); //console.log("red jupiter");
       mock.mockImplementation(() => {});
 
       log.black(message);
