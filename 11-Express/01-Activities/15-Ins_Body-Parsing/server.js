@@ -35,6 +35,7 @@ app.post('/api/reviews', (req, res) => {
     res.json(`Review for ${response.data.product} has been added!`);
   } else {
     res.json('Request body must at least contain a product name');
+    console.log('Invalid request:');
   }
 
   // Log the response body to the console
