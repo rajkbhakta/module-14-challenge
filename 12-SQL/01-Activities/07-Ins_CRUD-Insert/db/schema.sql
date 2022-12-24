@@ -9,7 +9,8 @@ USE inventory_db;
 -- Creates the table "produce" within inventory_db --
 CREATE TABLE produce (
   -- Creates a numeric column called "id" --
-  id INT NOT NULL,
+  id INT AUTO_INCREMENT,
   -- Makes a string column called "name" which cannot contain null --
-  name VARCHAR(30) NOT NULL
+  name VARCHAR(30) NOT NULL,
+  PRIMARY KEY (ID)
 );

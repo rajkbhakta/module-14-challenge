@@ -1,3 +1,3 @@
 -- Insert row into produce table --
-INSERT INTO produce (id, name)
-  VALUES (1, "apple");
+INSERT INTO produce (name)
+  VALUES ("banana"), ("kiwi"), ("coconut");

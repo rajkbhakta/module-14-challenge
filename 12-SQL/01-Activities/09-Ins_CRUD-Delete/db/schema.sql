@@ -11,14 +11,17 @@ CREATE TABLE produce (
   -- Creates a numeric column called "id" --
   id INT NOT NULL,
   -- Makes a string column called "name" which cannot contain null --
-  name VARCHAR(30) NOT NULL
+  name VARCHAR(30) NOT NULL,
+  price INT(100)
 );
 
 -- Insert multiple produce items --
-INSERT INTO produce (id, name)
+INSERT INTO produce (id, name, price)
 VALUES
-    ( 1, "apple"),
-    ( 2, "orange"),
-    ( 3, "banana");
+    ( 2, "apple", 1.75),
+    ( 2, "orange", 500),
+    ( 3, "banana", 20),
+    ( 3, "pomogranete", 1000);
+    
     
     
