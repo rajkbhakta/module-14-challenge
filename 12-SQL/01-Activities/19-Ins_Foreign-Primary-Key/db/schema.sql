@@ -4,10 +4,9 @@ CREATE DATABASE registrar_db;
 USE registrar_db;
 
 CREATE TABLE instructors (
-  id INT NOT NULL,
+  id INT NOT NULL PRIMARY AUTO_INCREMENT,
   first_name VARCHAR(30),
-  last_name VARCHAR(30),
-  PRIMARY KEY (id)
+  last_name VARCHAR(30)
 );
 
 CREATE TABLE courses (
@@ -15,7 +14,6 @@ CREATE TABLE courses (
   course_title VARCHAR(30) NOT NULL,
   instructor_id INT,
   order_details TEXT,
-  FOREIGN KEY (instructor_id)
-  REFERENCES instructors(id)
-  ON DELETE SET NULL
+  PRIMARY KEY (id),
+  FOREIGN KEY (instructor_id) REFERENCES instructors(id) ON DELETE SET NULL
 );
