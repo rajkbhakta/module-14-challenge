@@ -13,30 +13,24 @@ app.use(express.json());
 const db = mysql.createConnection(
   {
     host: 'localhost',
-    // MySQL username,
+    // MySQL Username
     user: 'root',
-    // MySQL password
     password: 'module12',
-    database: 'courses_db'
+    database: 'books_db'
   },
-  console.log(`Connected to the courses_db database.`)
+  console.log(`Connected to the books_db database.`)
 );
 
-// Hardcoded query: DELETE FROM course_names WHERE id = 3; vs prepared statements
-
-db.query(`DELETE FROM course_names WHERE id = ?`, 3, (err, result) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log(result);
-});
-
-// Query database
-db.query('SELECT * FROM course_names', function (err, results) {
+// Query database using COUNT() and GROUP BY
+db.query('SELECT COUNT(id) AS total_count FROM favorite_books GROUP BY in_stock', function (err, results) {
   console.log(results);
 });
 
-// Default response for any other request (Not Found)
+// Query database using SUM(), MAX(), MIN() AVG() and GROUP BY
+db.query('SELECT SUM(quantity) AS total_in_section, MAX(quantity) AS max_quantity, MIN(quantity) AS min_quantity, AVG(quantity) AS avg_quantity FROM favorite_books GROUP BY section', function (err, results) {
+  console.log(results);
+});
+
 app.use((req, res) => {
   res.status(404).end();
 });

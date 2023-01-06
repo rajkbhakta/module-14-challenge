@@ -1,3 +1,4 @@
+-- Active: 1657839480594@@127.0.0.1@3306
 INSERT INTO department (name)
 VALUES ("Web Development"),
        ("Data Science"),
