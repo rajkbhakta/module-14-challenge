@@ -3,14 +3,8 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
-  // This instance method uses a conditional statement to check if a user has pets
-  hasPets() {
-    //return this.numberOfPets > 0; //Same thing
-    if (this.numberOfPets > 0) {
-      return true;
-    } else {
-      return false;
-    }
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
@@ -40,9 +34,6 @@ User.init(
       validate: {
         len: [8],
       },
-    },
-    numberOfPets: {
-      type: DataTypes.INTEGER,
     },
   },
   {
