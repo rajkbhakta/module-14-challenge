@@ -11,7 +11,7 @@ const dishes = [
       'Manchego, Iberico, Cabrales, fig jam, grapes, pecans, and Spanich Chorizo',
   },
   {
-    dish_name: 'Fish Tacos',
+    dish_name: '<b>Fish Tacos</b>',
     description:
       'Battered/fried fish, corn tortillas, fresh slaw with jalepenos and cilantro, pickled red onion',
   },
