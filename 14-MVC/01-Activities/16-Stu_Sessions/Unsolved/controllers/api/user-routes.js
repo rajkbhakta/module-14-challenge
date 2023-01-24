@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     // TODO: Set up sessions with the 'loggedIn' variable
     req.session.save(() => {
       // TODO: Set the 'loggedIn' session variable to 'true'
-
+      req.session.loggedIn = true;
       res.status(200).json(dbUserData);
     });
   } catch (err) {
@@ -48,8 +48,16 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
+      // // We set up a session variable to count the number of times we visit the homepage
+    // if (req.session.countVisit) {
+    //   // If the 'countVisit' session variable already exists, increment it by 1
+    //   req.session.countVisit = req.session.countVisit + 1;
+    // } else {
+    //   // If the 'countVisit' session variable doesn't exist, set it to 1
+    //   req.session.countVisit = 1;
+    // }
       // TODO: Once the user successfully logs in, set up sessions with the 'loggedIn' variable
-
+      req.session.loggedIn = true;
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });

@@ -31,6 +31,7 @@ router.get('/', async (req, res) => {
         galleries,
         // We send over the current 'countVisit' session variable to be rendered
         countVisit: req.session.countVisit,
+        somevar: 'hello world'
       });
     });
   } catch (err) {
